@@ -8,7 +8,7 @@ public class BGCntr : MonoBehaviour {
     public float paralaxSpeed;
     public float speed;
     public Camera camera;
-    public GameCntr gameCntr;
+    public NewGameCntr gameCntr;
 
 
     private Transform cameraTransform;

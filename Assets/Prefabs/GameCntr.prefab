@@ -19,7 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4284849327388408}
-  - component: {fileID: 114196596371880694}
+  - component: {fileID: 114848453278648868}
+  - component: {fileID: 70208036983162078}
   m_Layer: 0
   m_Name: GameCntr
   m_TagString: Untagged
@@ -40,7 +41,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114196596371880694
+--- !u!70 &70208036983162078
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467406014237442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!114 &114848453278648868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,13 +64,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1467406014237442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ba1a7f16e960141ba9be3ff89ba34b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f89c95e03580a0489a03a54f60254ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tree: {fileID: 0}
-  firstTree: {fileID: 0}
-  isDead: 0
-  Wood: 460
+  wood: 0
+  tree: {fileID: 1248587040125728, guid: aa8fc5e1cf34d3649b7909cfa3791c5a, type: 2}
+  treeArr: []
+  stump: {fileID: 1717065248351956, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
   moveSpeed: 10
-  deathParticle: {fileID: 1413849098685930, guid: c04ac81ad976c964bbd83d8b728c5142,
-    type: 2}
+  canBGMove: 0
+  text: {fileID: 114445403978467466, guid: 80992f0ef93b2094eb77a9a7b3be80f3, type: 2}
