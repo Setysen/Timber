@@ -52,10 +52,10 @@ public class NewNewTree : MonoBehaviour {
 
     public void OnHit()
     {
-        hitTreeAnim.Play("onHitTree");
+        hitTreeAnim.Play("onHitTree");// запускаем анимацию
     }
 
-    public void OnBlockDestroyed()
+    public void OnBlockDestroyed() 
     {
         Destroy(blocksArr[actualBlock]);
         actualBlock++;
