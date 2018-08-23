@@ -13,12 +13,14 @@ public class NewGameCntr : MonoBehaviour {
     public float moveSpeed;// 
     public bool canBGMove = false;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
+    public GameObject clickText;
+ //   public Canvas canvas;
 
 
     // private Random rnd;
     private int hp;
     private NewNewTree mainTree;// ""
-
+    //private GameObject hiddenText;
     // Use this for initialization
     private void Awake()// этот метод вызывается при загрузке сцены 
     {
@@ -51,6 +53,13 @@ public class NewGameCntr : MonoBehaviour {
     {
         hp -= 1;
         wood += 1;
+
+
+
+        Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(1) ;// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
+        
+
+
         text.text = wood.ToString(); // изменяем текст 
         Debug.Log(wood); // пишем в консоль 
         mainTree.OnHit();// запускаем анимацию дерева

@@ -7,11 +7,12 @@ public class NewNewTree : MonoBehaviour {
     public GameObject Block;
     public GameObject Crone;
     public GameObject Roots;
-    public Animation hitTreeAnim;
+    
     public GameObject stump;//кидаем сюда пень
     public NewGameCntr newGameCntr;
     public ParticleSystem steamParticle;
 
+    private Animation hitTreeAnim;
     private Transform thisTransform;//для кеширования transform
     private int quantityBlocks;//число блоков 
     private int actualBlock = 1;// актуальный блок

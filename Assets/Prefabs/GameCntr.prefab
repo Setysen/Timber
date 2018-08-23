@@ -74,3 +74,4 @@ MonoBehaviour:
   moveSpeed: 10
   canBGMove: 0
   text: {fileID: 114445403978467466, guid: 80992f0ef93b2094eb77a9a7b3be80f3, type: 2}
+  clickText: {fileID: 1799106955444086, guid: 03ba595d156549f46b6a314300cd3f4b, type: 2}
