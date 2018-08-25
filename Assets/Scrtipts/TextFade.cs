@@ -13,7 +13,7 @@ public class TextFade : MonoBehaviour {
     {
         
         GetComponent<Text>().text = '+' + x.ToString();
-      //  this.GetComponent<Animation>().Play();
+        
     }
 
     public void OnAnimationEnded()
