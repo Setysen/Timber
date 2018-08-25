@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NewGameCntr : MonoBehaviour {
 
+    public int damage;
     public int wood;//считаем очки дерева
     public GameObject tree;// префаб дерева
     public GameObject[] treeArr;// массив из двух деревльев // первое- в центре, второе- справа
@@ -13,12 +14,16 @@ public class NewGameCntr : MonoBehaviour {
     public bool canBGMove;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
     public GameObject clickText;
-    public GameObject[] stumpArr; 
+    public GameObject[] stumpArr;
 
 
+
+    private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
     
+
+
     private void Awake()// этот метод вызывается при загрузке сцены 
     {
         treeArr = new GameObject[2];// создаем массив из двух деревьев
@@ -26,7 +31,8 @@ public class NewGameCntr : MonoBehaviour {
         treeArr[1] = Instantiate(tree, new Vector3(6, -4, 0), Quaternion.identity); // инициализируем массив
         mainTree = treeArr[0].GetComponent<NewNewTree>();  // привязываем скрипт первого/ центрального дерева, чтобы вызывать методы данного дерева
         mainTree.newGameCntr = this;// привязываем GameCntr к центральному дереву, чтобы оно вызывало методы GameCntr
-        hp = 3;
+        rnd = new System.Random();
+        hp = rnd.Next(15,20);
         canBGMove = false;
     }
 
@@ -54,22 +60,25 @@ public class NewGameCntr : MonoBehaviour {
 
     private void OnMouseDown() // при нажатии
     {
-        hp -= 1;
-        wood += 1;
+        hp -= damage;
+        wood += damage;
 
 
 
-        Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(x: 1) ;// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
+        Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(damage);// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
         
 
 
         text.text = wood.ToString(); // изменяем текст 
         //Debug.Log(wood); // пишем в консоль 
         mainTree.OnHit();// запускаем анимацию дерева
-        if (hp == 0)
+        if (hp <= 0)
         {
             mainTree.OnBlockDestroyed(); // при вырубке блока вызываем соответствующий метод дерева
-            hp = 3;
+            
+            hp = rnd.Next(8, 15);
+            wood += hp;
+            Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStartN2(hp);// данный метод немного отличается от OnAnimationStart
         }
     }
 

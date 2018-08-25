@@ -280,6 +280,11 @@ Prefab:
       propertyPath: stumpArr.Array.data[1]
       value: 
       objectReference: {fileID: 813225896}
+    - target: {fileID: 114848453278648868, guid: e133e946912497e4dac42aa0722cc442,
+        type: 2}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133e946912497e4dac42aa0722cc442, type: 2}
   m_IsPrefabParent: 0
@@ -507,7 +512,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
       propertyPath: m_LocalPosition.y
