@@ -6,18 +6,36 @@ using UnityEngine.UI;
 
 public class TextFade : MonoBehaviour {
 
-    
+    private Vector2 moveVector;
+    private System.Random rnd;
     // Use this for initialization
-    
-    public void OnAnimationStart(int x)
+    public void Start()
     {
         
+        rnd = new System.Random();
+        moveVector = new Vector2(rnd.Next(-1,1),4);
+    }
+
+    private void Update()
+    {
+        transform.Translate(moveVector * 2 * Time.deltaTime);
+    }
+
+    public void OnAnimationStart(int x)
+    {
+
         GetComponent<Text>().text = '+' + x.ToString();
-<<<<<<< HEAD
-      //  this.GetComponent<Animation>().Play();
-=======
         
->>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
+    }
+
+    public void OnAnimationStartN2(int x)
+    {
+        Text text = GetComponent<Text>();
+        
+        text.text = '+' + x.ToString();
+        text.fontSize = 45;
+        text.color = Color.green;
+
     }
 
     public void OnAnimationEnded()
