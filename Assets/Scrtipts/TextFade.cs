@@ -13,7 +13,11 @@ public class TextFade : MonoBehaviour {
     {
         
         GetComponent<Text>().text = '+' + x.ToString();
+<<<<<<< HEAD
       //  this.GetComponent<Animation>().Play();
+=======
+        
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
     }
 
     public void OnAnimationEnded()

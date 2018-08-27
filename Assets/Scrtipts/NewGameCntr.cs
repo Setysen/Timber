@@ -14,6 +14,7 @@ public class NewGameCntr : MonoBehaviour {
     public bool canBGMove = false;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
     public GameObject clickText;
+<<<<<<< HEAD
  //   public Canvas canvas;
 
 
@@ -22,6 +23,14 @@ public class NewGameCntr : MonoBehaviour {
     private NewNewTree mainTree;// ""
     //private GameObject hiddenText;
     // Use this for initialization
+=======
+    public GameObject[] stumpArr; 
+
+
+    private int hp;
+    private NewNewTree mainTree;
+    
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
     private void Awake()// этот метод вызывается при загрузке сцены 
     {
         treeArr = new GameObject[2];// создаем массив из двух деревьев
@@ -30,6 +39,10 @@ public class NewGameCntr : MonoBehaviour {
         mainTree = treeArr[0].GetComponent<NewNewTree>();  // привязываем скрипт первого/ центрального дерева, чтобы вызывать методы данного дерева
         mainTree.newGameCntr = this;// привязываем GameCntr к центральному дереву, чтобы оно вызывало методы GameCntr
         hp = 3;
+<<<<<<< HEAD
+=======
+        canBGMove = false;
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
     }
 
    
@@ -56,7 +69,11 @@ public class NewGameCntr : MonoBehaviour {
 
 
 
+<<<<<<< HEAD
         Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(1) ;// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
+=======
+        Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(x: 1) ;// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
         
 
 

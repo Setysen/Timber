@@ -265,6 +265,19 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 608639143}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 114848453278648868, guid: e133e946912497e4dac42aa0722cc442,
+        type: 2}
+      propertyPath: stumpArr.Array.data[0]
+      value: 
+      objectReference: {fileID: 1667956442}
+    - target: {fileID: 114848453278648868, guid: e133e946912497e4dac42aa0722cc442,
+        type: 2}
+      propertyPath: stumpArr.Array.data[1]
+      value: 
+      objectReference: {fileID: 813225896}
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133e946912497e4dac42aa0722cc442, type: 2}
   m_IsPrefabParent: 0
@@ -483,6 +496,60 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &747484262
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796529034202498, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717065248351956, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+      propertyPath: m_Name
+      value: Stump (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &813225896 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1717065248351956, guid: cd9a60f4da3310c4ab877ffbc0beaa6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 747484262}
+>>>>>>> parent of 81da12d... исправил проблему с пнями, добавил поощерение за вырубку одного блока
 --- !u!1 &1191110318
 GameObject:
   m_ObjectHideFlags: 0
