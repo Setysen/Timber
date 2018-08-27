@@ -10,24 +10,23 @@ public class NewGameCntr : MonoBehaviour {
     public GameObject tree;// префаб дерева
     public GameObject[] treeArr;// массив из двух деревльев // первое- в центре, второе- справа
     public GameObject stump;// префаб пня
-<<<<<<< HEAD
+
     public float moveSpeed;
     public bool canBGMove = false;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
     public GameObject clickText;
     //public Canvas canvas;
     // private Random rnd;
-=======
-    public float moveSpeed;// 
-    public bool canBGMove;// флаг, который разрешает, или запрещает всему двигаться
-    public Text text;// кидаем сюда текст UI чтобы его потом изменять
-    public GameObject clickText;
+
+   // public float moveSpeed;// 
+    //public bool canBGMove;// флаг, который разрешает, или запрещает всему двигаться
+   // public Text text;// кидаем сюда текст UI чтобы его потом изменять
+   // public GameObject clickText;
     public GameObject[] stumpArr;
 
 
 
     private System.Random rnd;
->>>>>>> 81da12daa639772f5aad2dfcb31cb2cfee5501e8
     private int hp;
     private NewNewTree mainTree;
     
