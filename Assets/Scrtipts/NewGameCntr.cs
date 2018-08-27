@@ -10,13 +10,11 @@ public class NewGameCntr : MonoBehaviour {
     public GameObject[] treeArr;// массив из двух деревльев // первое- в центре, второе- справа
     //public Tree[] TreeArr;
     public GameObject stump;// префаб пня
-    public float moveSpeed;// 
+    public float moveSpeed;
     public bool canBGMove = false;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
     public GameObject clickText;
- //   public Canvas canvas;
-
-
+    //public Canvas canvas;
     // private Random rnd;
     private int hp;
     private NewNewTree mainTree;// ""
@@ -40,7 +38,7 @@ public class NewGameCntr : MonoBehaviour {
         if (canBGMove) // если флаг canBGMove == true , то двигаем обв дерева влкво
         {
             treeArr[0].transform.Translate(moveSpeed * Vector2.left * Time.deltaTime);
-            treeArr[1].transform.Translate(moveSpeed * Vector2.left * Time.deltaTime);
+            treeArr[1].transform.Translate(moveSpeed * Vector2.left * Time.deltaTime);       
         }
         if (treeArr[0].transform.position.x < 0) // если центральное дерево встает в центр, убираем флаг canBGMove 
         {

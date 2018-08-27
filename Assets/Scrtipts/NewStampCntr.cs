@@ -15,9 +15,13 @@ public class NewStampCntr : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (GameCntr.canBGMove) transform.Translate(GameCntr.moveSpeed * Vector2.left * Time.deltaTime);// двигаемся влево, пока флаг isDead = true
+        if (GameCntr.canBGMove) //было GameCntr.canBGMove
+            transform.Translate(GameCntr.moveSpeed * Vector2.left * Time.deltaTime); // двигаемся влево, пока флаг isDead = true
 
-        if (transform.position.x < -12) Destroy(this.gameObject);// уничтожаем себя при выходе за сцену
-        if (GameCntr.canBGMove) transform.Translate(GameCntr.moveSpeed * Vector2.left * Time.deltaTime);
+        if (transform.position.x < -12) 
+            Destroy(this.gameObject);// уничтожаем себя при выходе за сцену
+
+        //if (GameCntr.canBGMove) 
+         //   transform.Translate(GameCntr.moveSpeed * Vector2.left * Time.deltaTime);
     }
 }
