@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796529034202498}
   - component: {fileID: 212086201911929406}
-  - component: {fileID: 114002983723864876}
+  - component: {fileID: 114062473392760294}
   m_Layer: 0
   m_Name: Stump
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114002983723864876
+--- !u!114 &114062473392760294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,9 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717065248351956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa97e2ab2bdc264da646caa285b1d58, type: 3}
+  m_Script: {fileID: 11500000, guid: aab78cad5a606274ab99e74a257ec73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameCntr: {fileID: 114848453278648868, guid: e133e946912497e4dac42aa0722cc442, type: 2}
 --- !u!212 &212086201911929406
 SpriteRenderer:
   m_ObjectHideFlags: 1

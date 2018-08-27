@@ -9,7 +9,7 @@ public class BGCntr : MonoBehaviour {
     public float speed;
     public Camera camera;
     public NewGameCntr gameCntr;
-    public List<GameObject> stampList;
+
 
     private Transform cameraTransform;
     private Transform[] layers;
@@ -68,5 +68,7 @@ public class BGCntr : MonoBehaviour {
         if (leftIndex == layers.Length)
             leftIndex = 0;
     }
+
+    
 
 }

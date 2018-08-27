@@ -58,7 +58,7 @@ public class NewNewTree : MonoBehaviour {
 
     public void OnBlockDestroyed() 
     {
-        Destroy(blocksArr[actualBlock]);// позже вставить сюда запуск анимации блока 
+        Destroy(blocksArr[actualBlock]);
         actualBlock++;
 
         Instantiate(steamParticle, new Vector2(0, -1.5f), Quaternion.identity);
