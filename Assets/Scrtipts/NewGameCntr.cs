@@ -14,16 +14,32 @@ public class NewGameCntr : MonoBehaviour {
     public bool canBGMove;// флаг, который разрешает, или запрещает всему двигаться
     public Text text;// кидаем сюда текст UI чтобы его потом изменять
     public GameObject clickText;
-
     public GameObject[] stumpArr;
-
+    public GameObject[] buttonMinions;
 
 
     private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
+    private float mainBonus;
+
+  
+
+    public void BonusInitialise()
+    {
+        foreach (GameObject button in buttonMinions)
+        {
+            mainBonus += button.GetComponent<ButtonCntr>().actualBonus;
+        }
+    }
+
     
 
+    private void AddBonus()// метод будет вызываться каждые 0.25 секунды
+    {
+        wood += Mathf.RoundToInt( mainBonus);
+        text.text = wood.ToString() + '$';
+    }
 
     private void Awake()// этот метод вызывается при загрузке сцены 
     {
@@ -35,6 +51,7 @@ public class NewGameCntr : MonoBehaviour {
         rnd = new System.Random();
         hp = rnd.Next(15,20);
         canBGMove = false;
+        InvokeRepeating("AddBonus", 0.25f , 0.25f);// говорим вызывать бонус каждые 0.25 секунды
     }
 
    
@@ -103,3 +120,5 @@ public class NewGameCntr : MonoBehaviour {
 
     
 }
+
+
