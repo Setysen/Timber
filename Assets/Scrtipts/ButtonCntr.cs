@@ -13,13 +13,15 @@ public class ButtonCntr : MonoBehaviour {
     // Use this for initialization
 
 
-
+    private float deltaX = 0;
+    private float deltaY = 0;
     private float xDelta = 0.38f;
     
-    private Transform parentOfThisButtomTransform;
+    public Transform childeTransform;
 
 	void Start () {
-        parentOfThisButtomTransform = GetComponent<Transform>().parent.transform; //находим трансформ родителя, чтобы потом спавнить миниона
+       // childeTransform = GetComponent<Transform>().GetChild(2).transform; //находим трансформ родителя, чтобы потом спавнить миниона
+       // MinionRender();
 	}
 	
 	// Update is called once per frame
@@ -29,35 +31,54 @@ public class ButtonCntr : MonoBehaviour {
 
     public void onButtonDown()// метод покупки , вызывать при нажатии кнопки
     {
-        if (newGameCntr.wood >= updateCoast)
+        if (/*newGameCntr.wood*/ 1 >= updateCoast)
         {
-            newGameCntr.wood -= updateCoast;// вычитаем очки
+           // newGameCntr.wood -= updateCoast;// вычитаем очки
             updateCoast = Mathf.RoundToInt(updateCoast * 1.6f);// умножаем и округляем до целого
             actualBonus += nextBonus;//увеличиваем бонус в секунду
             numberOfMinions += 1;// увеличиваем номер миньонов
-            newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
-            MinionRender();
+                                 //   newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
+            AddMinionOnScreen(); //спавним на сцене еще одного миньона 
         }
+       
     }
 
     public void MinionRender()//рендерим минионов относительно трансформоа родителя кнопки
     {
-        float xDelta = 0.38f;
-        float deltaX = 0;
-        float deltaY = 0;
+
+        Debug.Log("MinionRender");
+
+        float xDelta = 0.9f;
+        
             for (int i= 0; i < numberOfMinions; i++)
-        {
-            Instantiate(minion,  new Vector2(deltaX, deltaY), Quaternion.identity , parentOfThisButtomTransform);
+            {
+            Debug.Log(i);
+            Instantiate(minion, childeTransform.position + new Vector3(deltaX, deltaY), Quaternion.identity , childeTransform);
             if (deltaY != 0)
             {
                 deltaY = 0;
             }
             else
             {
-                deltaY = 0.29f;
+                deltaY = 0.75f;
             }
             deltaX += xDelta;
         }
+    }
+
+    private void AddMinionOnScreen()
+    {
+        float  xDelta = 0.9f;
+        Instantiate(minion, childeTransform.position + new Vector3(deltaX, deltaY), Quaternion.identity, childeTransform);
+        if (deltaY != 0)
+        {
+            deltaY = 0;
+        }
+        else
+        {
+            deltaY = 0.75f;
+        }
+        deltaX += xDelta;
     }
 
 }
