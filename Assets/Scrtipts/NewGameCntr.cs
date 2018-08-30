@@ -87,7 +87,7 @@ public class NewGameCntr : MonoBehaviour {
         
 
 
-        text.text = wood.ToString(); // изменяем текст 
+        text.text = wood.ToString() + '$'; // изменяем текст 
         //Debug.Log(wood); // пишем в консоль 
         mainTree.OnHit();// запускаем анимацию дерева
         if (hp <= 0)

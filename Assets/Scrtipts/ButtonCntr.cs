@@ -20,8 +20,8 @@ public class ButtonCntr : MonoBehaviour {
     public Transform childeTransform;
 
 	void Start () {
-       // childeTransform = GetComponent<Transform>().GetChild(2).transform; //находим трансформ родителя, чтобы потом спавнить миниона
-       // MinionRender();
+       
+        MinionRender();
 	}
 	
 	// Update is called once per frame
@@ -31,13 +31,13 @@ public class ButtonCntr : MonoBehaviour {
 
     public void onButtonDown()// метод покупки , вызывать при нажатии кнопки
     {
-        if (/*newGameCntr.wood*/ 1 >= updateCoast)
+        if (newGameCntr.wood >= updateCoast)
         {
-           // newGameCntr.wood -= updateCoast;// вычитаем очки
-            updateCoast = Mathf.RoundToInt(updateCoast * 1.6f);// умножаем и округляем до целого
+            newGameCntr.wood -= updateCoast;// вычитаем очки
+            updateCoast *= 2;
             actualBonus += nextBonus;//увеличиваем бонус в секунду
             numberOfMinions += 1;// увеличиваем номер миньонов
-                                 //   newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
+            newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
             AddMinionOnScreen(); //спавним на сцене еще одного миньона 
         }
        
