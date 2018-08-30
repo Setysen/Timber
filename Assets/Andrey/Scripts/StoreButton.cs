@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pause : MonoBehaviour {
+public class StoreButton : MonoBehaviour {
 
     public bool isPaused;
-    public GameObject menu;
+    public GameObject storePanel;
 
-	void Start () {
-	}
-	
-	void Update () {
-      
+    void Start()
+    {
+    }
+
+    void Update()
+    {
+
         if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false)
         {
             isPaused = true;
@@ -22,16 +24,16 @@ public class Pause : MonoBehaviour {
         }
         if (isPaused == true)
         {
-            menu.SetActive(true);
+            storePanel.SetActive(true);
         }
         else if (isPaused == false)
         {
-            menu.SetActive(false);
-        }	
-	}
+            storePanel.SetActive(false);
+        }
+    }
 
-    public void PauseButton()
-    { 
+    public void StButton()
+    {
         if (isPaused == false)
         {
             isPaused = true;
@@ -41,8 +43,6 @@ public class Pause : MonoBehaviour {
             isPaused = false;
         }
     }
-
-
 
 
 }
