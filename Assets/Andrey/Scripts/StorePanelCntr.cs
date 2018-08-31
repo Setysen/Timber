@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class StorePanelCntr : MonoBehaviour {
 
-    public bool stop = false;
-    public GameObject storePanel;
-    float speed = 10f;
+    public bool stop1 = false; // остановка по нижней границе
+    public bool stop2 = false; // остановка по верхней границе
+    public GameObject storePanel; // панель с кнопками
+    public float speed = 3f; // скорость движения панели с кнопками
+    public RectTransform coords; // отсюда берём верхнюю и нижнюю границу панели с кнопками
 
 	void Start () 
     {
@@ -15,32 +17,32 @@ public class StorePanelCntr : MonoBehaviour {
 	
 	void Update () 
     {
-<<<<<<< HEAD
-        //if ()
-        //{
-        //    stop = true;
-        //}
-        //if ( Input.GetButton (KeyCode.W) && stop == false)
-        //{
-        //    storePanel.transform.position = transform.position = new Vector3(storePanel.transform.position.x, storePanel.transform.position.y + 1, 0);
-        //}
-        //if ( Input.GetButton (KeyCode.S) && stop == false)
-        //{
-        //    storePanel.transform.position = transform.position = new Vector3(storePanel.transform.position.x, storePanel.transform.position.y - 1, 0);
-        //}
-=======
-        ////if ()
-        ////{
-        ////    stop = true;
-        ////}
-        //if (Input.GetButton("Vertical") && stop == false)
-        //{
-        //    storePanel.transform.position += storePanel.transform. * speed * Time.deltaTime;
-        //}
-        ////if (Input.GetButton("Vertical") && stop == false)
-        ////{
-        ////    storePanel.transform.position += storePanel.transform.forward * speed *  Time.deltaTime;
-        ////}
->>>>>>> 83b5fe3aeba5353f508a10ea8dfb0d302f49df09
+        coords = GetComponent<RectTransform>();
+        if (coords.offsetMin[1] >= -60)//bottom   //если координаты нижней границы StorePanel больше, то останавливаемся
+        {
+            stop1 = true;
+        }
+        else if (true)  // если первый if не выполняется, то нас всё устраивает
+        {
+            stop1 = false;
+        }
+
+        if (coords.offsetMax[1] <= 3f)//Top   //если координаты верхней границы StorePanel меньше, то останавливаемся
+        {
+            stop2 = true;
+        }
+        else if (true) // если первый if не выполняется, то нас всё устраивает
+        {
+            stop2 = false;
+        }
+
+        if (Input.GetKey(KeyCode.S) && stop1 == false)
+        {
+            storePanel.transform.Translate(0, speed* Time.deltaTime, 0);
+        }
+        if (Input.GetKey(KeyCode.W) && stop2 == false)
+        {
+            storePanel.transform.Translate(0, -1f * speed * Time.deltaTime, 0);
+        }
 	}
 }

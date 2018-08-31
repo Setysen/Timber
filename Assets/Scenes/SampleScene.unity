@@ -123,19 +123,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224254802609724040, guid: 8c9e2f000d2d6a842b029a583a04bc58,
     type: 2}
   m_PrefabInternal: {fileID: 958256719}
---- !u!114 &174932704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 174932702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4210f22468abd05408e4178a61464fb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stop: 0
-  storePanel: {fileID: 174932702}
 --- !u!1 &213903845
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +825,7 @@ Prefab:
       objectReference: {fileID: 236886283}
     - target: {fileID: 1035784216122994, guid: 8c9e2f000d2d6a842b029a583a04bc58, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224443782337486404, guid: 8c9e2f000d2d6a842b029a583a04bc58,
         type: 2}
@@ -889,6 +876,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -13.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114720433313240760, guid: 8c9e2f000d2d6a842b029a583a04bc58,
+        type: 2}
+      propertyPath: stop1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9e2f000d2d6a842b029a583a04bc58, type: 2}
