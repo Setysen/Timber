@@ -14,7 +14,7 @@ public class ButtonCntr : MonoBehaviour {
 
 
     private float deltaX = 0;
-    private float deltaY = 0;
+    private float deltaY = 0.75f;
     private float xDelta = 0.38f;
     
     public Transform childeTransform;
@@ -43,7 +43,7 @@ public class ButtonCntr : MonoBehaviour {
        
     }
 
-    public void MinionRender()//рендерим минионов относительно трансформоа родителя кнопки
+    public void MinionRender()//рендерим минионов относительно трансформоа ребенка  кнопки
     {
 
         Debug.Log("MinionRender");
