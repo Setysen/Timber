@@ -8,18 +8,18 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1536071466566532}
-  m_IsPrefabParent: 1
---- !u!1 &1536071466566532
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1179896686252192}
+  m_IsPrefabAsset: 1
+--- !u!1 &1179896686252192
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
-  - component: {fileID: 4550120285655284}
-  - component: {fileID: 212433291064008620}
+  - component: {fileID: 4839380924105606}
+  - component: {fileID: 212120813623850368}
   m_Layer: 0
   m_Name: Minion2
   m_TagString: Untagged
@@ -27,25 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4550120285655284
+--- !u!4 &4839380924105606
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1536071466566532}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -0.5, z: -0.19713153}
-  m_LocalScale: {x: 17.5, y: 17.5, z: 0.653152}
+  m_GameObject: {fileID: 1179896686252192}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -202.08, y: -15.53, z: 30.146734}
+  m_LocalScale: {x: 1, y: 1, z: 13.409223}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212433291064008620
+--- !u!212 &212120813623850368
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1536071466566532}
+  m_GameObject: {fileID: 1179896686252192}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,13 +75,14 @@ SpriteRenderer:
   m_SortingLayerID: 757434217
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8819c1a8a855a244482232d83e4c1b2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e513cc43bf17912429c533b75de2ff27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2.9, y: 2.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
