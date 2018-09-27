@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 984752430}
   - component: {fileID: 984752429}
   m_Layer: 0
-  m_Name: "\u0434\u0440\u043E\u0432\u043E\u0441\u0435\u043A_4"
+  m_Name: TimberMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

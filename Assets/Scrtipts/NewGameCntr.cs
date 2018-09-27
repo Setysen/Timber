@@ -16,8 +16,9 @@ public class NewGameCntr : MonoBehaviour {
     public GameObject clickText;
     public GameObject[] stumpArr;
     public GameObject[] buttonMinions;
+    public GameObject timberMan;
 
-
+    private Animator timberManAnimator;
     private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
@@ -52,6 +53,7 @@ public class NewGameCntr : MonoBehaviour {
         hp = rnd.Next(15,20);
         canBGMove = false;
         InvokeRepeating("AddBonus", 0.25f , 0.25f);// говорим вызывать бонус каждые 0.25 секунды
+        timberManAnimator = timberMan.GetComponent<Animator>();
     }
 
    
@@ -81,7 +83,7 @@ public class NewGameCntr : MonoBehaviour {
         hp -= damage;
         wood += damage;
 
-
+        timberManAnimator.SetTrigger("Chop");
 
         Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(damage);// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
         
@@ -102,6 +104,7 @@ public class NewGameCntr : MonoBehaviour {
 
     public void OnTreeDestroyed()// метод, вызывемый деревом, при смерти. 
     {
+        timberManAnimator.SetTrigger("Jump");
 
         stumpArr[0].GetComponent<StumpCntr>().dvigaisyaYobaniyPen(true);
         stumpArr[1].GetComponent<StumpCntr>().dvigaisyaYobaniyPen(true);
