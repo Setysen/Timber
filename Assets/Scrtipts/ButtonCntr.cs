@@ -1,26 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonCntr : MonoBehaviour {
 
     public int numberOfMinions;
     public float nextBonus;
     public float actualBonus;
-    public int updateCoast;
+    public int cost;
+    public int updateCost;
     public GameObject minion;//Сюда префаб  миниона с спрайтом 
     public NewGameCntr newGameCntr;//Сюда скрипт New GameCntr
     // Use this for initialization
-
+    public GameObject objText;
 
     private float deltaX = 0;
     private float deltaY = 0.75f;
     private float xDelta = 0.38f;
-    
+    private Text text;
     public Transform childeTransform;
 
 	void Start () {
-       
+        text = objText.GetComponent<Text>();
+        UpdateText();
         MinionRender();
 	}
 	
@@ -31,10 +34,10 @@ public class ButtonCntr : MonoBehaviour {
 
     public void onButtonDown()// метод покупки , вызывать при нажатии кнопки
     {
-        if (newGameCntr.wood >= updateCoast)
+        if (newGameCntr.wood >= cost)
         {
-            newGameCntr.wood -= updateCoast;// вычитаем очки
-            updateCoast *= 2;
+            newGameCntr.wood -= cost;// вычитаем очки
+            cost *= 2;
             actualBonus += nextBonus;//увеличиваем бонус в секунду
             numberOfMinions += 1;// увеличиваем номер миньонов
             newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
@@ -80,5 +83,27 @@ public class ButtonCntr : MonoBehaviour {
         }
         deltaX += xDelta;
     }
+
+    public void UpdateText()
+    {
+        text.text = "Cost: " + cost + "Profit: " + actualBonus ;
+    }
+
+}
+
+
+public class UpButtom : MonoBehaviour
+{
+    public GameObject objText;
+    public GameObject masterButton;
+
+    private Text text;
+
+
+    private void Start()
+    {
+        text = objText.GetComponent<Text>();
+    }
+
 
 }
