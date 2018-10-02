@@ -54,6 +54,7 @@ public class NewGameCntr : MonoBehaviour {
         canBGMove = false;
         InvokeRepeating("AddBonus", 0.25f , 0.25f);// говорим вызывать бонус каждые 0.25 секунды
         timberManAnimator = timberMan.GetComponent<Animator>();
+        BonusInitialise();
     }
 
    

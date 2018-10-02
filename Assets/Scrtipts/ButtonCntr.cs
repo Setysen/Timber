@@ -8,8 +8,9 @@ public class ButtonCntr : MonoBehaviour {
     public int numberOfMinions;
     public float nextBonus;
     public float actualBonus;
-    public int cost;
+    public int pOneCost;
     public int updateCost;
+    public float updateBonus;
     public GameObject minion;//Сюда префаб  миниона с спрайтом 
     public NewGameCntr newGameCntr;//Сюда скрипт New GameCntr
     // Use this for initialization
@@ -34,16 +35,29 @@ public class ButtonCntr : MonoBehaviour {
 
     public void onButtonDown()// метод покупки , вызывать при нажатии кнопки
     {
-        if (newGameCntr.wood >= cost)
+        if (newGameCntr.wood >= pOneCost)
         {
-            newGameCntr.wood -= cost;// вычитаем очки
-            cost *= 2;
+            newGameCntr.wood -= pOneCost;// вычитаем очки
+            pOneCost *= 2;
             actualBonus += nextBonus;//увеличиваем бонус в секунду
-            numberOfMinions += 1;// увеличиваем номер миньонов
+            numberOfMinions += 1;// увеличиваем количество миньонов
             newGameCntr.BonusInitialise();// вызываем данную функцию для учтения бонуса в секунду
             AddMinionOnScreen(); //спавним на сцене еще одного миньона 
+            UpdateText();
         }
        
+    }
+
+    public void onUpdateButtonDown()
+    {
+        if (newGameCntr.wood >= updateCost)
+        {
+            newGameCntr.wood -= updateCost;
+            updateCost =  Mathf.RoundToInt(1.5f * updateCost);
+            actualBonus *= updateBonus;
+            nextBonus *= updateBonus;
+            UpdateText();
+        }
     }
 
     public void MinionRender()//рендерим минионов относительно трансформоа ребенка  кнопки
@@ -86,24 +100,9 @@ public class ButtonCntr : MonoBehaviour {
 
     public void UpdateText()
     {
-        text.text = "Cost: " + cost + "Profit: " + actualBonus ;
+        Debug.Log("Update text");
+        text.text = "Cost: " + pOneCost + " Update cost: " + updateCost + " Profit: " + actualBonus ;
     }
 
 }
 
-
-public class UpButtom : MonoBehaviour
-{
-    public GameObject objText;
-    public GameObject masterButton;
-
-    private Text text;
-
-
-    private void Start()
-    {
-        text = objText.GetComponent<Text>();
-    }
-
-
-}
