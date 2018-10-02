@@ -5,7 +5,10 @@ using UnityEngine;
 public class StorePanelCntr : MonoBehaviour
 {
 
-    public bool stop = false;
+    public float maxX;
+    public float minX;
+
+    //public bool stop = false;
     public GameObject storePanel;
     float speed = 10f;
 
@@ -16,20 +19,8 @@ public class StorePanelCntr : MonoBehaviour
 
     void Update()
     {
-        /*
-        if ()
-        {
-            stop = true;
-        }
-        if ( Input.GetButton (KeyCode.W) && stop == false)
-        {
-            storePanel.transform.position = transform.position = new Vector3(storePanel.transform.position.x, storePanel.transform.position.y + 1, 0);
-        }
-        if ( Input.GetButton (KeyCode.S) && stop == false)
-        {
-            storePanel.transform.position = transform.position = new Vector3(storePanel.transform.position.x, storePanel.transform.position.y - 1, 0);
-        }
-
-	*/
+        if (transform.position.x >= minX && transform.position.x <= maxX)
+            transform.Translate(Vector3.up* Input.GetAxis("Vertical") * speed * Time.deltaTime );
+        
     }
 }
