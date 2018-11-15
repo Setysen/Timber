@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class ButtonCntr : MonoBehaviour {
 
     public int numberOfMinions;
-    public float nextBonus;
-    public float actualBonus;
+    public int nextBonus;
+    public int actualBonus;
     public int pOneCost;
     public int updateCost;
-    public float updateBonus;
+    public int updateBonus;
     public GameObject minion;//Сюда префаб  миниона с спрайтом 
     public NewGameCntr newGameCntr;//Сюда скрипт New GameCntr
     // Use this for initialization
@@ -35,9 +35,9 @@ public class ButtonCntr : MonoBehaviour {
 
     public void onButtonDown()// метод покупки , вызывать при нажатии кнопки
     {
-        if (newGameCntr.wood >= pOneCost)
+        if (newGameCntr.wood/100 >= System.Convert.ToUInt64(pOneCost))
         {
-            newGameCntr.wood -= pOneCost;// вычитаем очки
+            newGameCntr.wood -= System.Convert.ToUInt64(pOneCost*100);// вычитаем очки
             pOneCost *= 2;
             actualBonus += nextBonus;//увеличиваем бонус в секунду
             numberOfMinions += 1;// увеличиваем количество миньонов
@@ -47,7 +47,7 @@ public class ButtonCntr : MonoBehaviour {
         }
        
     }
-
+    /*
     public void onUpdateButtonDown()
     {
         if (newGameCntr.wood >= updateCost)
@@ -59,7 +59,7 @@ public class ButtonCntr : MonoBehaviour {
             UpdateText();
         }
     }
-
+    */
     public void MinionRender()//рендерим минионов относительно трансформоа ребенка  кнопки
     {
 

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class NewGameCntr : MonoBehaviour {
 
     public int damage;
-    public int wood;//считаем очки дерева
+    public System.UInt64 wood;//считаем очки дерева
     public GameObject tree;// префаб дерева
     public GameObject[] treeArr;// массив из двух деревльев // первое- в центре, второе- справа
     public GameObject stump;// префаб пня
@@ -22,7 +23,7 @@ public class NewGameCntr : MonoBehaviour {
     private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
-    private float mainBonus;
+    private int mainBonus;
 
   
 
@@ -38,8 +39,8 @@ public class NewGameCntr : MonoBehaviour {
 
     private void AddBonus()// метод будет вызываться каждые 0.25 секунды
     {
-        wood += Mathf.RoundToInt( mainBonus);
-        text.text = wood.ToString() + '$';
+        wood += System.Convert.ToUInt64( mainBonus);
+        text.text = (wood/100).ToString() + '$';
     }
 
     private void Awake()// этот метод вызывается при загрузке сцены 
@@ -82,7 +83,7 @@ public class NewGameCntr : MonoBehaviour {
     private void OnMouseDown() // при нажатии
     {
         hp -= damage;
-        wood += damage;
+        wood += System.Convert.ToUInt64(damage*100);
 
         timberManAnimator.SetTrigger("Chop");
 
@@ -90,7 +91,7 @@ public class NewGameCntr : MonoBehaviour {
         
 
 
-        text.text = wood.ToString() + '$'; // изменяем текст 
+        text.text = (wood/100).ToString() + '$'; // изменяем текст 
         //Debug.Log(wood); // пишем в консоль 
         mainTree.OnHit();// запускаем анимацию дерева
         if (hp <= 0)
@@ -98,7 +99,7 @@ public class NewGameCntr : MonoBehaviour {
             mainTree.OnBlockDestroyed(); // при вырубке блока вызываем соответствующий метод дерева
             
             hp = rnd.Next(8, 15);
-            wood += hp;
+            wood +=System.Convert.ToUInt64( damage*300);
             Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStartN2(hp);// данный метод немного отличается от OnAnimationStart
         }
     }
