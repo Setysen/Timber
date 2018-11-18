@@ -505,6 +505,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 41.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: numberOfMinions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: P2
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: D
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: delta
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5617eb28913f7a54abf1f762ba45697b, type: 2}
   m_IsPrefabAsset: 0
@@ -1350,6 +1370,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 40.6
       objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: numberOfMinions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: P2
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: D
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: delta
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5617eb28913f7a54abf1f762ba45697b, type: 2}
   m_IsPrefabAsset: 0
@@ -1724,6 +1764,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 50.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: numberOfMinions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: P2
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: D
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: delta
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5617eb28913f7a54abf1f762ba45697b, type: 2}
   m_IsPrefabAsset: 0
@@ -1929,6 +1989,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 37.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: numberOfMinions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: delta
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: P2
+      value: 235
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: D
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5617eb28913f7a54abf1f762ba45697b, type: 2}
   m_IsPrefabAsset: 0
@@ -2118,6 +2198,26 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 56.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: numberOfMinions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: D
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: delta
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410690567794260, guid: 5617eb28913f7a54abf1f762ba45697b,
+        type: 2}
+      propertyPath: P2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5617eb28913f7a54abf1f762ba45697b, type: 2}

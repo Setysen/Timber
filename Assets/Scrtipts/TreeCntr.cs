@@ -25,7 +25,7 @@ public class TreeCntr : MonoBehaviour {
 
     private void Awake()
     {
-        hitTreeAnim = GetComponent<Animation>();//кешируем анимацию
+        hitTreeAnim = GetComponent<Animation>();
         thisTransform = this.GetComponent<Transform>();//кешируем
         //canBGMove = false;
         

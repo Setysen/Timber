@@ -53,7 +53,7 @@ public class NewGameCntr : MonoBehaviour {
         rnd = new System.Random();
         hp = rnd.Next(15,20);
         canBGMove = false;
-        InvokeRepeating("AddBonus", 0.25f , 0.25f);// говорим вызывать бонус каждые 0.25 секунды
+        InvokeRepeating("AddBonus", 0.1f , 0.1f);// говорим вызывать бонус каждые 0.25 секунды
         timberManAnimator = timberMan.GetComponent<Animator>();
         BonusInitialise();
     }
