@@ -23,7 +23,7 @@ public class NewGameCntr : MonoBehaviour {
     private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
-    private int mainBonus;
+    private System.UInt64 mainBonus;
 
   
 
@@ -31,16 +31,17 @@ public class NewGameCntr : MonoBehaviour {
     {
         foreach (GameObject button in buttonMinions)
         {
-            mainBonus += button.GetComponent<ButtonCntr>().actualBonus;
+            mainBonus += System.Convert.ToUInt64(button.GetComponent<ButtonCntr>().allProfit);
         }
     }
 
     
 
-    private void AddBonus()// метод будет вызываться каждые 0.25 секунды
+    private void AddBonus()// метод будет вызываться каждые 0.1 секунды
     {
-        wood += System.Convert.ToUInt64( mainBonus);
+        wood +=  mainBonus;
         text.text = (wood/100).ToString() + '$';
+        Debug.Log(wood);
     }
 
     private void Awake()// этот метод вызывается при загрузке сцены 
@@ -53,7 +54,7 @@ public class NewGameCntr : MonoBehaviour {
         rnd = new System.Random();
         hp = rnd.Next(15,20);
         canBGMove = false;
-        InvokeRepeating("AddBonus", 0.1f , 0.1f);// говорим вызывать бонус каждые 0.25 секунды
+        InvokeRepeating("AddBonus", 0.1f , 0.1f);// говорим вызывать бонус каждые 0.1 секунды
         timberManAnimator = timberMan.GetComponent<Animator>();
         BonusInitialise();
     }
