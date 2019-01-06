@@ -4,45 +4,45 @@ using UnityEngine;
 
 public class StoreButton : MonoBehaviour {
 
-    public bool isPaused;
+   
     public GameObject storePanel;
+    public GameObject gradientPanel;
+
+    private bool isPaused;
 
     void Start()
     {
+        isPaused = false;
     }
 
-    void Update()
+    
+
+    public void OnClickButton()
     {
+        if (isPaused)
+        {
+            TurnOff();
+            isPaused = !isPaused;
+        }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false)
+        else
         {
-            isPaused = true;
+            TurnOn();
+            isPaused = !isPaused;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
-        {
-            isPaused = false;
-        }
-        if (isPaused == true)
-        {
-            storePanel.SetActive(true);
-        }
-        else if (isPaused == false)
-        {
-            storePanel.SetActive(false);
-        }
+         
+
     }
 
-    public void StButton()
+    private void TurnOn()
     {
-        if (isPaused == false)
-        {
-            isPaused = true;
-        }
-        else if (isPaused == true)
-        {
-            isPaused = false;
-        }
+        storePanel.SetActive(true);
+        gradientPanel.SetActive(true);
     }
-
+    private void TurnOff()
+    {
+        storePanel.SetActive(false);
+        gradientPanel.SetActive(false);
+    }
 
 }

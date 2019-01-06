@@ -36,12 +36,12 @@ public class ParalaxScript : MonoBehaviour {
 
     private void Update()
     {
-        
+       
         
         lastCameraX = cameraTransform.position.x;
         float deltaX = cameraTransform.position.x - lastCameraX;
         transform.position += Vector3.right * (deltaX * paralaxSpeed);
-
+    
         if (cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
             ScrollLeft();
         if (cameraTransform.position.x > (layers[rightIndex].transform.position.x + viewZone))

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class NewGameCntr : MonoBehaviour {
 
     public int damage;
-    public int wood;//считаем очки дерева
+    public System.UInt64 wood;//считаем очки дерева
     public GameObject tree;// префаб дерева
     public GameObject[] treeArr;// массив из двух деревльев // первое- в центре, второе- справа
     public GameObject stump;// префаб пня
@@ -16,12 +17,13 @@ public class NewGameCntr : MonoBehaviour {
     public GameObject clickText;
     public GameObject[] stumpArr;
     public GameObject[] buttonMinions;
+    public GameObject timberMan;
 
-
+    private Animator timberManAnimator;
     private System.Random rnd;
     private int hp;
     private NewNewTree mainTree;
-    private float mainBonus;
+    private System.UInt64 mainBonus;
 
   
 
@@ -29,16 +31,17 @@ public class NewGameCntr : MonoBehaviour {
     {
         foreach (GameObject button in buttonMinions)
         {
-            mainBonus += button.GetComponent<ButtonCntr>().actualBonus;
+            mainBonus += System.Convert.ToUInt64(button.GetComponent<ButtonCntr>().allProfit);
         }
     }
 
     
 
-    private void AddBonus()// метод будет вызываться каждые 0.25 секунды
+    private void AddBonus()// метод будет вызываться каждые 0.1 секунды
     {
-        wood += Mathf.RoundToInt( mainBonus);
-        text.text = wood.ToString() + '$';
+        wood +=  mainBonus;
+        text.text = (wood/100).ToString() + '$';
+        Debug.Log(wood);
     }
 
     private void Awake()// этот метод вызывается при загрузке сцены 
@@ -51,7 +54,9 @@ public class NewGameCntr : MonoBehaviour {
         rnd = new System.Random();
         hp = rnd.Next(15,20);
         canBGMove = false;
-        InvokeRepeating("AddBonus", 0.25f , 0.25f);// говорим вызывать бонус каждые 0.25 секунды
+        InvokeRepeating("AddBonus", 0.1f , 0.1f);// говорим вызывать бонус каждые 0.1 секунды
+        timberManAnimator = timberMan.GetComponent<Animator>();
+        BonusInitialise();
     }
 
    
@@ -79,15 +84,15 @@ public class NewGameCntr : MonoBehaviour {
     private void OnMouseDown() // при нажатии
     {
         hp -= damage;
-        wood += damage;
+        wood += System.Convert.ToUInt64(damage*100);
 
-
+        timberManAnimator.SetTrigger("Chop");
 
         Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStart(damage);// позже вставить сюда количество срубленного дерева за один клик //создаем текст, вылетающий при клике
         
 
 
-        text.text = wood.ToString() + '$'; // изменяем текст 
+        text.text = (wood/100).ToString() + '$'; // изменяем текст 
         //Debug.Log(wood); // пишем в консоль 
         mainTree.OnHit();// запускаем анимацию дерева
         if (hp <= 0)
@@ -95,13 +100,14 @@ public class NewGameCntr : MonoBehaviour {
             mainTree.OnBlockDestroyed(); // при вырубке блока вызываем соответствующий метод дерева
             
             hp = rnd.Next(8, 15);
-            wood += hp;
+            wood +=System.Convert.ToUInt64( damage*300);
             Instantiate(clickText, this.transform).GetComponent<TextFade>().OnAnimationStartN2(hp);// данный метод немного отличается от OnAnimationStart
         }
     }
 
     public void OnTreeDestroyed()// метод, вызывемый деревом, при смерти. 
     {
+        timberManAnimator.SetTrigger("Jump");
 
         stumpArr[0].GetComponent<StumpCntr>().dvigaisyaYobaniyPen(true);
         stumpArr[1].GetComponent<StumpCntr>().dvigaisyaYobaniyPen(true);

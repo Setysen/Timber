@@ -17,9 +17,9 @@ public class GameCntr : MonoBehaviour {
     // Use this for initialization
     void Start () {
         firstTree.GetComponent<CapsuleCollider2D>().enabled = true;//включаем первому дерево коллайдер
-        minionsArr = new int[3];                                                           //  bGAnim = backGround.GetComponent<Animation>();
+        //minionsArr = new int[3];                                                           //  bGAnim = backGround.GetComponent<Animation>();
         canBGMove = false;
-        Spawn();
+       // Spawn();
         
     }
 
