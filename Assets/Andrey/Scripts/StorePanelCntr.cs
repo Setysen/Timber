@@ -23,7 +23,8 @@ public class StorePanelCntr : MonoBehaviour
     {
 
         if (transform.position.x >= minX && transform.position.x <= maxX)
-            transform.Translate(Vector3.up* Input.GetAxis("Vertical") * speed * Time.deltaTime );
-        
+            transform.Translate(Vector3.up * Input.GetAxis("Vertical") * speed * Time.deltaTime);
+
     }
 
+};

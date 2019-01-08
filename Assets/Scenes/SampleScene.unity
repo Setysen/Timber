@@ -139,7 +139,6 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 114111657452227342, guid: 0f5a3af65ba85564e80ba3451227a01d,
     type: 2}
-
   m_PrefabInternal: {fileID: 1391073584}
   m_GameObject: {fileID: 182946183}
   m_Enabled: 1
@@ -209,7 +208,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 28f41d558e0a3884a8c408d4f19f3e29, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -270,7 +269,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &195588473
-
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,8 +337,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195588473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.045, y: 0.686, z: 0}
-  m_LocalScale: {x: 0.20995, y: 0.25340965, z: 0.20995}
+  m_LocalPosition: {x: 0.046, y: 1.011, z: 0}
+  m_LocalScale: {x: 0.24519587, y: 0.2532642, z: 0.2591287}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -805,7 +803,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300004, guid: 94db1af80dec87d4abde4ffda49e44ad,
+      objectReference: {fileID: 21300004, guid: 780dfeb43e0770646b2cf7502cc9e845,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9a60f4da3310c4ab877ffbc0beaa6f, type: 2}
@@ -1111,10 +1109,10 @@ RectTransform:
   m_Father: {fileID: 608639144}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -795.53, y: 446.33}
-  m_SizeDelta: {x: 240, y: 240}
+  m_AnchorMin: {x: 0.020770835, y: 0.7602593}
+  m_AnchorMax: {x: 0.14652085, y: 0.9760001}
+  m_AnchoredPosition: {x: -0.9000244, y: 2.9000244}
+  m_SizeDelta: {x: -1.9, y: 6.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946114928
 MonoBehaviour:
@@ -2097,9 +2095,7 @@ Prefab:
       propertyPath: newGameCntr
       value: 
       objectReference: {fileID: 236886283}
-
     - target: {fileID: 224906139390089540, guid: 5617eb28913f7a54abf1f762ba45697b,
-
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 37.1
@@ -2207,43 +2203,42 @@ Prefab:
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -795.53
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 446.33
+      value: 2.9
       objectReference: {fileID: 0}
-
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 240
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 240
+      value: 6.1
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.020770835
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.7602593
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.14652085
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.9760001
       objectReference: {fileID: 0}
     - target: {fileID: 224346623142904690, guid: 0f5a3af65ba85564e80ba3451227a01d,
         type: 2}
@@ -2273,7 +2268,6 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0f5a3af65ba85564e80ba3451227a01d, type: 2}
-
   m_IsPrefabAsset: 0
 --- !u!1001 &1433417874
 Prefab:
@@ -2614,10 +2608,10 @@ RectTransform:
   m_Father: {fileID: 608639144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 639, y: 464.12}
-  m_SizeDelta: {x: 562.7, y: 127.9}
+  m_AnchorMin: {x: 0.69000006, y: 0.8612594}
+  m_AnchorMax: {x: 0.97968775, y: 0.9760001}
+  m_AnchoredPosition: {x: 7, y: -2}
+  m_SizeDelta: {x: 6.700012, y: 3.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775945226
 MonoBehaviour:
